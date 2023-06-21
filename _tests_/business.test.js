@@ -16,3 +16,24 @@ describe ("Player", () => {
         expect(player1.name).toEqual("Jason");
     });
 });
+
+describe ( "Game", () => {
+    test ("It will add a player object in a game object", () => {
+        const playerName = { name: "Jason", tempScore: 0, permScore: 0 };
+        const newGame = new Game();
+        newGame.addPlayer(playerName);
+        expect(newGame.players[1]).toEqual({ name: "Jason", tempScore: 0, permScore: 0, id: 1 });
+    });
+    test ("It will switch current player", () => {
+        const newGame = new Game();
+        newGame.setActivePlayer();
+        expect(newGame.currentPlayer).toEqual(2);
+    });
+    test ("It will set current player back to 1", () => {
+        const newGame = new Game();
+        newGame.setActivePlayer();
+        newGame.setActivePlayer();
+        expect(newGame.currentPlayer).toEqual(1);
+    })
+
+});
