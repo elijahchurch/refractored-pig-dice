@@ -1,6 +1,5 @@
 {
-  "name": "shape-tracker",
-  "version": "1.0.0",
+  "name": "refractored-pig",
   "main": "index.js",
   "scripts": {
     "build": "webpack --mode=development",

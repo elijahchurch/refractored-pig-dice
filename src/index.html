@@ -1,22 +1,68 @@
 <!DOCTYPE html>
-<html lang="en-US">
-
+<html lang="en">
 <head>
-    <title>Shape Tracker</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pig Dice</title>
 </head>
-
 <body>
-    <h3>Enter three lengths to determine if they can make a triangle.</h3>
-    <form id="triangle-checker-form">
-        <label for="length1">Enter a number:</label>
-        <input id="length1" type="number">
-        <label for="length2">Enter a number:</label>
-        <input id="length2" type="number">
-        <label for="length3">Enter a number:</label>
-        <input id="length3" type="number">
-        <button type="submit">Submit</button>
-    </form>
-    <div id="response"></div>
-</body>
+    <div id="winning" class="hidden">
+        <h1 id="winner-name">NAME</h1>
+        <h1>YOUR'E A WINNER BABY!</h1>
+        <button id="new-game">New Game</button>
+    </div>
+    <div id="general-div" class="general-div">
+        <!-- rules -->
+        <div id="rules" class="rules">
+            <ol>
+                <h4>Rules:</h4>
+                <li>Roll the dice for your turn.</li>
+                <li>Continue rolling the die until you're happy with the number of points you've scored Then, "hold" by handing the die over to your opponent, and track all points earned during your turn.</li>
+                <li>In case you hit '1' you loose your points for that round, and the turn goes to your opponent.</li>
+                <li>Reach 100 points first and win the game.</li>
+            </ol>
+        </div>
+        <!-- form -->
+        <form class="">
+            <label for="">Player 1:</label>
+            <input id="player-1-input-name" type="text">
+            <label for="">Player 2:</label>
+            <input id="player-2-input-name" type="text">
+            <button type="submit">Let's Play!</button>
+        </form>
+        <div id="goal-div" class="invisible">
+            <h1>Goal: 100 Points</h1>
+        </div>
+        <div id="main-div" class="invisible main-div">
+            <!-- Player 1 -->
+            <div id="player-1" class="container">
+                <h2> <span id="player-1-name"></span></h2>
+                <h3>Score: <span id="player-1-perm-score" class="perm-score">0</span></h3>
+                <h4 id="temp-score">Temporary Score: <span id="player-1-temp-score">0</span></h4>
+            </div>
 
+            <!-- middle div -->
+            <div id="middle-div" class="container">
+                <div id="dice-current-number" class="invisible"> <h2 id="display-dice-roll">0</h2> </div>
+                
+                <div id="buttons" class="buttons">
+                    <button id="roll-dice">Roll the Dice</button>
+                    <button id="hold">Hold</button>
+                    <button id="new-game">New Game</button>
+                </div>
+            </div>
+
+            <!-- Player 2 -->
+            <div id="player-2" class="container">
+                <h2><span id="player-2-name"></span></h2>
+                <h3>Score: <span id="player-2-perm-score" class="perm-score">0</span></h3>
+                <h4 id="temp-score">Temporary Score: <span id="player-2-temp-score">0</span></h4>
+            </div>
+        </div>
+    </div>
+
+</body>
 </html>
+
+<!-- <img id="img" src="img/die1.png"> -->
