@@ -31,5 +31,5 @@ Game.prototype.addPlayer = function(player) {
 export function Player(name) {
     this.name = name;
     this.tempScore = 0;
-    this.permScore = 85;
+    this.permScore = 0;
 };

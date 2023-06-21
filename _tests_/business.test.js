@@ -8,3 +8,11 @@ describe("diceRoll", () => {
         expect(result).toBeLessThanOrEqual(6);
     });
 });
+
+describe ("Player", () => {
+
+    test("It will record name in a player object with base score 0", () => {
+        const player1 = new Player("Jason");
+        expect(player1.name).toEqual("Jason");
+    });
+});
